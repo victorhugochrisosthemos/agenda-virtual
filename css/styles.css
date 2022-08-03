@@ -1,0 +1,379 @@
+body{
+    background-color: #8EC3FD;
+}
+.new-task-container{ /*container para colocar as tarefas*/
+    background-color: #429CFC;
+    padding: 30px 20px;
+    border-radius: 5px;
+    box-shadow:0 10px 15px rgba(0,0,0,0.2);
+    display: flex;
+    margin-top: 30px;
+    
+}
+.new-task-container input { 
+    flex: 3;
+    font-size: 1rem;
+    border: 2px solid #347CC9;
+    border-radius: 5px;
+    font-weight: 500;
+}
+.new-task-container input:focus {
+    outline: none;
+    border-color: white;
+}
+
+.tasks-container{ /*container das tarefas*/
+    background-color: #429CFC;
+    padding: 20px 20px 5px 10px;
+    border-radius: 10px;
+    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    color:rgb(255, 255, 255);
+    overflow:visible;
+}
+
+.task-item{
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+.task-item i {
+    background-color: #429CFC;
+    color: black;
+    padding: 12px;
+    border-radius: 5px;
+}
+
+.task-item i:hover {
+    cursor: pointer;
+}
+
+.error{
+    border: 2px solid red !important;
+}
+.error::placeholder{
+    color: red;
+}
+.completed{
+    text-decoration: line-through;
+}
+@media only screen and (max-width: 659px) {
+    .new-task-button {
+        flex: 1;
+        font-size: 1rem;
+        border: none;
+        border-radius: 5px;
+        background-color: #347CC9;
+        height: 100%;
+        color: #fff;
+        padding: 12px;
+        padding-left: 2px;
+        min-width: 20%;
+        overflow: hidden;
+        font-size: 10px;
+        cursor: pointer;
+    }
+    .ultima{
+       height : 700px !important;
+    }
+    .gmail{
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        position: fixed;
+        bottom: 10px;
+        left: 10px;
+    }
+    .gmail img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    }
+    .outlook{
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        position: fixed;
+        bottom: 10px;
+        left: 80px;
+    }
+    .outlook img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    }
+    .instagram{
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        position: fixed;
+        bottom: 10px;
+        left: 150px;
+    }
+    .instagram img {
+        width: 50px;
+        height: 50px; 
+        border-radius: 50%;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    }
+    .linkedin{
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        position: fixed;
+        bottom: 10px;
+        left: 220px;
+    }
+    .linkedin img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    }
+    .facebook{
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        position: fixed;
+        bottom: 80px;
+        left: 10px;
+    }
+    .facebook img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    }
+    .tiktok{
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        position: fixed;
+        bottom: 80px;
+        left: 80px;
+    }
+    .tiktok img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    }
+    .github{
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        position: fixed;
+        bottom: 80px;
+        left: 150px;
+    }
+    .github img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    }
+    .youtube{
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        position: fixed;
+        bottom: 80px;
+        left: 220px;
+    }
+    .youtube img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    }
+    .google{
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        position: fixed;
+        bottom: 150px;
+        left: 10px;
+    }
+    .google img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    }
+    .g1{
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        position: fixed;
+        bottom: 150px;
+        left: 80px;
+    }
+    .g1 img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    }
+}
+@media only screen and (min-width: 660px) {
+    .new-task-button {
+        flex: 1;
+        font-size: 1rem;
+        border: none;
+        border-radius: 5px;
+        background-color: #347CC9;
+        height: 100%;
+        color: #fff;
+        padding: 12px;
+        padding-left: 2px;
+        min-width: 20%;
+        overflow: hidden;
+        cursor: pointer;
+    }
+    .gmail{
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        position: fixed;
+        top: 500px;
+        left: 10px;
+    }
+    .gmail img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    }
+    .outlook{
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        position: fixed;
+        top: 80px;  /*diferença de 70 px entre um e outro fica legal*/
+        left: 10px;
+    }
+    .outlook img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    }
+    .instagram{
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        position: fixed;
+        top: 150px;
+        left: 10px;
+    }
+    .instagram img {
+        width: 50px;
+        height: 50px; 
+        border-radius: 50%;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    }
+    .linkedin{
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        position: fixed;
+        top: 220px; /*diferença de 70 px entre um e outro fica legal*/
+        left: 10px;
+    }
+    .linkedin img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    }
+    .facebook{
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        position: fixed;
+        top: 290px; /*diferença de 70 px entre um e outro fica legal*/
+        left: 10px;
+    }
+    .facebook img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    }
+    .tiktok{
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        position: fixed;
+        top: 360px; /*diferença de 70 px entre um e outro fica legal*/
+        left: 10px;
+    }
+    .tiktok img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    }
+    .github{
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        position: fixed;
+        top: 430px; /*diferença de 70 px entre um e outro fica legal*/
+        left: 10px;
+    }
+    .github img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    }
+    .youtube{
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        position: fixed;
+        top: 220px;
+        right: 10px;
+    }
+    .youtube img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    }
+    .google{
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        position: fixed;
+        top: 80px;
+        right: 10px;
+    }
+    .google img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    }
+    .g1{
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        position: fixed;
+        top: 150px;
+        right: 10px;
+    }
+    .g1 img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    }
+}
+
+
+

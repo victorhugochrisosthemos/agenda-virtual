@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda Virtual</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script defer src="js/bootstrap.bundle.min.js"></script>
+    <script defer src="js/horaEdatas.js"></script>
+    <script defer src="js/logicaDeTarefas.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://kit.fontawesome.com/a6f276ea0f.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous"></script>
+</head>
+<body>
+   <!-- Topo da página-->
+  <nav class="navbar navbar-expand-sm navbar-dark mb-5" style="background-color: #0C4685;" aria-label="Third navbar example">
+    <div class="container">
+      <a class="navbar-brand fs-2" href="#">Agenda Virtual</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  </nav>
+  <div class="container">
+     <!-- Carrosel de fotos-->
+    <div id="carouselExampleInterval" class="carousel slide mb-5" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="3000">
+          <img class="img-fluid" src="https://picsum.photos/1080/250">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Minhas Fotos</h5>
+          </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <img class="img-fluid" src="https://picsum.photos/1081/250">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Minhas Fotos</h5>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="img-fluid" src="https://picsum.photos/1082/250">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Minhas Fotos</h5>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="img-fluid" src="https://picsum.photos/1083/250">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Minhas Fotos</h5>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="img-fluid" src="https://picsum.photos/1084/250">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Minhas Fotos</h5>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="img-fluid" src="https://picsum.photos/1085/250">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Minhas Fotos</h5>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="img-fluid" src="https://picsum.photos/1086/250">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Minhas Fotos</h5>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="img-fluid" src="https://picsum.photos/1087/250">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Minhas Fotos</h5>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="img-fluid" src="https://picsum.photos/1088/250">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Minhas Fotos</h5>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="img-fluid" src="https://picsum.photos/1089/250">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Minhas Fotos</h5>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <div class="row">
+      <!-- Lista de tarefas-->
+      <div class="col-md-8 mb-3"> 
+          <div class="tasks-container"></div>
+          <div class="new-task-container">
+              <input 
+                  type="text" 
+                  class="new-task-input" 
+                  placeholder="Tarefa para ser feita"
+              />
+              <button class="new-task-button">Adicionar</button>
+          </div>
+    </div>
+      <div class="col-md-3"> 
+        <div class="card">
+            <div class="card-body">
+              <!-- Hora / data / frase do dia-->
+              <div id="hours" ></div>
+              <div id="data"></div>
+              <div id="countingDatas"></div>
+              <div id="jsFrase"></div>
+            </div>
+        </div>
+      </div>
+    </div>
+      <div class="row">
+        <div  class="list-group col-md-4 mt-5">
+          <a href="#" class="list-group-item list-group-item-action active fs-3" style="background-color:#347CC9; border: 1px solid #347CC9;" aria-current="true">
+            Sites + Vistos
+          </a>
+          <a class="list-group-item list-group-item-action" target="_blank" href="https://sisualuno.mec.gov.br/#/login">SISU</a>
+          <a class="list-group-item list-group-item-action" target="_blank" href="https://acessounico.mec.gov.br/prouni">ProUni</a>
+          <a class="list-group-item list-group-item-action" target="_blank" href="https://fiesselecaoaluno.mec.gov.br/usuario-login">Fies</a>
+          <a class="list-group-item list-group-item-action" target="_blank" href="https://enem.inep.gov.br/participante/#!/">ENEM</a>
+          <a class="list-group-item list-group-item-action" target="_blank" href="https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos">Provas ENEM</a>
+          <a class="list-group-item list-group-item-action" target="_blank" href="https://www.chess.com/play">Chess.com</a>
+          <a class="list-group-item list-group-item-action" target="_blank" href="https://lichess.org/training/themes">Lichess</a>
+          <a class="list-group-item list-group-item-action" target="_blank" href="https://www.duolingo.com/learn">Duolingo</a>
+          <a class="list-group-item list-group-item-action" target="_blank" href="https://www.netflix.com/browse">Netflix</a>
+          <a class="list-group-item list-group-item-action" target="_blank" href="https://www.primevideo.com/ref=av_auth_return_redir">Prime video</a>
+          <a class="list-group-item list-group-item-action" target="_blank" href="https://globoplay.globo.com/">GloboPlay</a>
+        </div>
+          <div class="list-group ultima col-md-4 mt-5 mb-5">
+            <a href="#" class="list-group-item list-group-item-action active fs-3" style="background-color:#347CC9; border: 1px solid #347CC9;" aria-current="true">
+              Cursos YouTube
+            </a>
+            <a href="https://www.youtube.com/watch?v=sj0p9O85AIg&list=PL2Fdisxwzt_cajoGVWTx44wM6Ht09QJ3A" target="_blank" class="list-group-item list-group-item-action">HTML</a>
+            <a href="https://www.youtube.com/watch?v=HtVRRHoASes&list=PL2Fdisxwzt_f5C7Mv0kg1EAHhy2VJLf1c" target="_blank"  class="list-group-item list-group-item-action">CSS</a>
+            <a href="https://www.youtube.com/watch?v=vEwPnjqWQ-g&list=PL2Fdisxwzt_d590u3uad46W-kHA0PTjjw" target="_blank" class="list-group-item list-group-item-action">JavaScript</a>
+            <a href="https://www.youtube.com/watch?v=bGUuPgEn4U4&list=PL2Fdisxwzt_cOvOTUJhwEOxNV59wTs3ac" target="_blank" class="list-group-item list-group-item-action">PHP</a>
+            <a href="https://www.youtube.com/watch?v=zxziRBDFjGc&list=PL2Fdisxwzt_cQ7SMv8Drlg2TcrOS5LDZq" target="_blank" class="list-group-item list-group-item-action">NodeJs</a>
+            <a href="https://www.youtube.com/watch?v=fahe5eH_J_4&list=PL2Fdisxwzt_drOw-CacUTPr9c8p06UO59" target="_blank" class="list-group-item list-group-item-action">Bootstrap</a>
+            <a href="https://www.youtube.com/watch?v=skrgPvJH_4M&list=PLltHgIJnfTsAnyA8KPXC6ohTYzGEreVEa" target="_blank" class="list-group-item list-group-item-action">WordPress</a>
+            <a href="https://www.youtube.com/watch?v=gkVMhlyb3vU&list=PL2Fdisxwzt_eKdkUw9HzWl34p6MxzD3xY" target="_blank" class="list-group-item list-group-item-action">jQuery</a>
+            <a href="https://www.youtube.com/watch?v=U_A2kwUfmlw&list=PLvE-ZAFRgX8hnECDn1v9HNTI71veL3oW0&index=1" target="_blank" class="list-group-item list-group-item-action">Python</a>
+            <a href="https://www.youtube.com/c/HashtagPrograma%C3%A7%C3%A3o/playlists" target="_blank" class="list-group-item list-group-item-action">Ferramentas Python</a>
+          </div>
+      </div>
+  </div>
+</div>
+<div class="gmail">
+  <a href="https://mail.google.com/mail/u/0/#inbox" target="_blank"><img src="images/gmail.png"></a>
+</div>
+<div class="outlook">
+  <a href="https://outlook.live.com/mail/0/" target="_blank"><img src="images/outlook.png"></a>
+</div>
+<div class="instagram">
+  <a href="https://www.instagram.com/" target="_blank"><img src="images/instagram.png"></a>
+</div>
+<div class="linkedin">
+  <a href="https://br.linkedin.com/" target="_blank"><img src="images/linkedin.png"></a>
+</div>
+<div class="facebook">
+  <a href="https://www.facebook.com/" target="_blank"><img src="images/facebook.png"></a>
+</div>
+<div class="tiktok">
+  <a href="https://www.tiktok.com/pt-BR/" target="_blank"><img src="images/tiktok.png"></a>
+</div>
+<div class="github">
+  <a href="https://github.com/" target="_blank"><img src="images/github.png"></a>
+</div>
+<div class="youtube">
+  <a href="https://www.youtube.com/" target="_blank"><img src="images/youtube.jpg"></a>
+</div>
+<div class="google">
+  <a href="https://www.google.com.br/" target="_blank"><img src="images/google.png"></a>
+</div>
+<div class="g1">
+  <a href="https://g1.globo.com/" target="_blank"><img src="images/g1.png"></a>
+</div>
+</body>
+</html>
